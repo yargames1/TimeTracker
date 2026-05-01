@@ -3,6 +3,7 @@ package com.intern.timetracker.controller;
 import com.intern.timetracker.dto.TimeRecord.CreateTimeRecordRequest;
 import com.intern.timetracker.model.TimeRecord;
 import com.intern.timetracker.service.TimeRecordService;
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
@@ -20,7 +21,7 @@ public class TimeRecordController {
 
     // Создать запись о затраченном времени сотрудника на задачу
     @PostMapping
-    public TimeRecord createTimeRecord(@RequestBody CreateTimeRecordRequest request) {
+    public TimeRecord createTimeRecord(@Valid @RequestBody CreateTimeRecordRequest request) {
         return timeRecordService.createTimeRecord(
                 request.getEmployeeId(),
                 request.getTaskId(),

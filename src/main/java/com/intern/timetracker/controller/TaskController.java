@@ -5,6 +5,7 @@ import com.intern.timetracker.dto.Task.UpdateTaskStatusRequest;
 import com.intern.timetracker.model.Task;
 import com.intern.timetracker.model.TaskStatus;
 import com.intern.timetracker.service.TaskService;
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -19,7 +20,7 @@ public class TaskController {
 
     // Создание задачи
     @PostMapping
-    public Task createTask(@RequestBody CreateTaskRequest request) {
+    public Task createTask(@Valid @RequestBody CreateTaskRequest request) {
         return taskService.createTask(
                 request.getTitle(),
                 request.getDescription()
@@ -35,7 +36,7 @@ public class TaskController {
     // Изменение статуса задачи
     @PatchMapping("/{id}/status")
     public void updateStatus(@PathVariable Long id,
-                             @RequestBody UpdateTaskStatusRequest request) {
+                             @Valid @RequestBody UpdateTaskStatusRequest request) {
         taskService.updateTaskStatus(id, request.getStatus());
     }
 }
