@@ -174,6 +174,7 @@ http://localhost:8080/h2-console
 * Чистое разделение слоев: Controller → Service → Mapper
 * Использование DTO для работы с API
 * Обработка ошибок через кастомные исключения
+* Bean Validation через Spring Boot
 
 ---
 
