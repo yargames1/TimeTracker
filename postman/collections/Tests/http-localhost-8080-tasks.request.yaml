@@ -1,0 +1,14 @@
+$kind: http-request
+name: http://localhost:8080/tasks
+url: http://localhost:8080/tasks
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"title\": \"Test task\",\r
+
+    \  \"description\": \"Task for test\"\r
+
+    }"
+order: 1777582072806

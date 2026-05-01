@@ -1,0 +1,20 @@
+$kind: http-request
+name: http://localhost:8080/time-records
+url: http://localhost:8080/time-records
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"employeeId\": 1,\r
+
+    \  \"taskId\": 1,\r
+
+    \  \"startTime\": \"2026-04-30T10:00:00\",\r
+
+    \  \"endTime\": \"2026-04-30T12:00:00\",\r
+
+    \  \"description\": \"Working on tests\"\r
+
+    }"
+order: 4235234176301402

@@ -1,0 +1,5 @@
+$kind: http-request
+name: http://localhost:8080/tasks/{id}
+url: http://localhost:8080/tasks/1
+method: GET
+order: 4033673458716906
